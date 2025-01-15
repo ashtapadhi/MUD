@@ -1,0 +1,814 @@
+0‚d'	*†H†÷ ‚d0‚d10	`†He0‚^	*†H†÷ ‚^‚^{
+    "ietf-mud:mud" : {
+      "mud-version" : 1,
+      "mud-url" : "http://127.0.0.1:8080/mudfile",
+      "last-update" : "2018-09-16T13:53:04.908+10:00",
+      "cache-validity" : 100,
+      "is-supported" : true,
+      "systeminfo" : "amazonEcho",
+      "from-device-policy" : {
+        "access-lists" : {
+          "access-list" : [ {
+            "name" : "from-ipv4-amazonecho"
+          }, {
+            "name" : "from-ethernet-amazonecho"
+          } ]
+        }
+      },
+      "to-device-policy" : {
+        "access-lists" : {
+          "access-list" : [ {
+            "name" : "to-ipv4-amazonecho"
+          } ]
+        }
+      }
+    },
+    "ietf-access-control-list:access-lists" : {
+      "acl" : [ {
+        "name" : "from-ipv4-amazonecho",
+        "type" : "ipv4-acl-type",
+        "aces" : {
+          "ace" : [ {
+            "name" : "from-ipv4-amazonecho-0",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "dcape-na.amazon.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-1",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "softwareupdates.amazon.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-2",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:dst-dnsname" : "3.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-6",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:dst-dnsname" : "ntp-g7g.amazon.com"
+              },
+              "udp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-7",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "todo-ta-g7g.amazon.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          },  {
+            "name" : "from-ipv4-amazonecho-9",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "www.example.org"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          },  {
+            "name" : "from-ipv4-amazonecho-11",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "pindorama-us-west-2.amazon.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-12",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "tinytts-us-west-2.amazon.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-14",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "device-fingerprintdb-v1.s3.amazonaws.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-15",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "api.amazonalexa.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-16",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "www.example.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-17",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:dst-dnsname" : "1.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-18",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "www.meethue.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          },  {
+            "name" : "from-ipv4-amazonecho-20",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:dst-dnsname" : "2.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-21",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "kindle-time.amazon.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-22",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "device-metrics-us.amazon.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-23",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "files.whooshkaa.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-25",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:dst-dnsname" : "pins.amazon.com"
+              },
+              "udp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 33434
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-26",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "media.whooshkaa.com"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-27",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:dst-dnsname" : "0.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ipv4-amazonecho-28",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:dst-dnsname" : "www.example.net"
+              },
+              "tcp" : {
+                "destination-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                },
+                "ietf-mud:direction-initiated" : "from-device"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          } ]
+        }
+      }, {
+        "name" : "to-ipv4-amazonecho",
+        "type" : "ipv4-acl-type",
+        "aces" : {
+          "ace" : [ {
+            "name" : "to-ipv4-amazonecho-0",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:src-dnsname" : "3.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-1",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:src-dnsname" : "ntp-g7g.amazon.com"
+              },
+              "udp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-2",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "api.amazonalexa.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-3",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "tinytts-us-west-2.amazon.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-4",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:src-dnsname" : "2.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-5",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "todo-ta-g7g.amazon.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-6",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:src-dnsname" : "1.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-7",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:src-dnsname" : "0.north-america.pool.ntp.org"
+              },
+              "udp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 123
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-8",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "www.example.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          },  {
+            "name" : "to-ipv4-amazonecho-11",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "device-metrics-us.amazon.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          },  {
+            "name" : "to-ipv4-amazonecho-13",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "device-fingerprintdb-v1.s3.amazonaws.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-15",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "dcape-na.amazon.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-16",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "www.meethue.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-17",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "files.whooshkaa.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-18",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 17,
+                "ietf-acldns:src-dnsname" : "pins.amazon.com"
+              },
+              "udp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 33434
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-19",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "kindle-time.amazon.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-20",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "media.whooshkaa.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-21",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "softwareupdates.amazon.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-22",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "www.example.net"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-24",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "www.example.org"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 80
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "to-ipv4-amazonecho-25",
+            "matches" : {
+              "ipv4" : {
+                "protocol" : 6,
+                "ietf-acldns:src-dnsname" : "pindorama-us-west-2.amazon.com"
+              },
+              "tcp" : {
+                "source-port" : {
+                  "operator" : "eq",
+                  "port" : 443
+                }
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          } ]
+        }
+      }, {
+        "name" : "from-ethernet-amazonecho",
+        "type" : "ethernet-acl-type",
+        "aces" : {
+          "ace" : [ {
+            "name" : "from-ethernet-amazonecho-0",
+            "matches" : {
+              "ietf-mud:mud" : {
+                "local-networks" : [ null ]
+              },
+              "eth" : {
+                "ethertype" : "0x0006"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          }, {
+            "name" : "from-ethernet-amazonecho-1",
+            "matches" : {
+              "ietf-mud:mud" : {
+                "local-networks" : [ null ]
+              },
+              "eth" : {
+                "ethertype" : "0x888e"
+              }
+            },
+            "actions" : {
+              "forwarding" : "accept"
+            }
+          } ]
+        }
+      } ]
+    }
+  } ‚o0‚k0‚S =f¶Ë[V >‡|ıMğ¯»Ğş0	*†H†÷ 0E10	UIN10U
+Some-State1!0U
+Internet Widgits Pty Ltd0240817114440Z250817114440Z0E10	UIN10U
+Some-State1!0U
+Internet Widgits Pty Ltd0‚"0	*†H†÷ ‚ 0‚
+‚ ·6v&â<*iĞ9«®ö-ÈÙşÕ}é©°ÀRÍI{#vF¶„Z6M²¿„iVTtH‹¤3¸6aMÈ}ØÛÑeBP¸Q.!wóUB„(†¦«‘.Ğ»ß'¬mèú‹@ÒzšòGq§ƒµ[ÖP^Vg<>,<9¯xÖnGnş9¶ašûºŠß²½èoHŞ&ä.œñ7Üì˜òp‹©ò~fQVM©ÂT0¾°<ÿ_ÃPqÊzLÓA	ù¬
+ôüL$S®9låˆÈÑ® ° ’q€>3dô^ÕşçÍvwbíÄ¿\]UxDÒ¹ÂÍ1R/¤º¬ÉOÙ^ıÚ,^÷ £S0Q0UG]ô;Z©b3ÖyÌ¼ğ9¼¡<¸0U#0€G]ô;Z©b3ÖyÌ¼ğ9¼¡<¸0Uÿ0ÿ0	*†H†÷ ‚ 7ï€qšLxØ1Ø9€\[[1Aª¸(î·#–L¤é·öP¹„.ƒıšz¿v{ƒk_vMåÿT7;ş:»u¬Q¥ÑæCBJûæÕÙ_Pßqø‹jDx6õKXËq¼RYU¿fæÄo‹hÓ•%W!ÛÜ¨:ø÷sŒ{úÌ}ˆœ¥u4/mğÏW¯Ş¾ÜÕé»Ÿ4^`B?uÄ¹mÙ«j…jH)øÉ™Fª²Åş	å{¸	¸>4¬œn{…L0İBG"JyKÒ¤åÏ14g7ıÈQ’Š•ã¿@(g·Ë•ìJ€“j_Á*ú€ğLrô?ˆÅD‰ Ö‹1‚m0‚i0]0E10	UIN10U
+Some-State1!0U
+Internet Widgits Pty Ltd=f¶Ë[V >‡|ıMğ¯»Ğş0	`†He ä0	*†H†÷	1	*†H†÷0	*†H†÷	1250114094719Z0/	*†H†÷	1" ¥B)ú{…‹gû$™}i"âœ™ò…ÛoñÃ“Õ%,0y	*†H†÷	1l0j0	`†He*0	`†He0	`†He0
+*†H†÷0*†H†÷ €0*†H†÷@0+0*†H†÷(0	*†H†÷ ‚ S(‚>¿2"F‰œ8‰ÎJ-º­ r})×ª(¥JE?À:*v®e_õÔb©ÙÃño¼ pñ¹%j¿V=	ÍITOtÍÊ"Ù\üŞLUÿÉ"N`‚ñşş„ì\C}¯¿¨ƒ…Yxw£¤ÅsYuï‹¥x'ôT‡aK¥-FâS
+€—Ñ€Ëuğ1,AŠşòQ0!CLJ‹6óô®¯däs×*C,Ûo
+T„íğ)yïJb™dğôY¶_Wâ0Ç/õ\îûÂMÌ'#{	k¾à4ùÙïZ¾*tëñÙêîÕq\ê§e€ÖÂY†2Ú
+|L9,ÕÏß!·QJÅù:u“›
